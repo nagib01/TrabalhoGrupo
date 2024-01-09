@@ -25,17 +25,18 @@
     })();
     
     function clearForm() {
-        // Substitua "nome-do-campo" pelos IDs reais dos campos que você deseja limpar
+       $('form').get(0).reset();
         document.getElementById("validationCustom01").value = "";
         document.getElementById("validationCustom02").value = "";
-        // Adicione mais linhas semelhantes para outros campos, se necessário
+        document.getElementById("validationCustom03").value = "";
+        document.getElementById("validationCustom04").value = "";
+        
         
     var cancelButton = document.getElementById("cancelButton");
     cancelButton.addEventListener('click', clearForm);
     };
-    function clearForm(){
-  
-}
+   
+   
 
 </script>
 
@@ -86,7 +87,7 @@
 
             <div class="mb-3">
                 <label for="validationCustom04" class="form-label">Morada</label>
-                <textarea class="form-control" id="validationCustom04" rows="3" required></textarea>
+                <textarea class="form-control" id="validationCustom05" rows="3" required></textarea>
                 <div class="invalid-feedback">
                        É obrigatório preencher a morada
                     </div>
@@ -116,12 +117,13 @@
                   </div>
 
                  
-                  <div class="col-12">
-                    <button type="button" class="btn btn-secondary" id="cancelButton" onclick="clearForm()">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-        
-                  </div>
-                
+
+                <div class="col-12">
+   
+                 <button type="button" class="btn btn-secondary" id="cancelButton" onclick="clearForm()">Cancelar</button>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+ 
         </form>
         
        
