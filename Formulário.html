@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
+      
+ 
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script>
         (function () {
         'use strict';
@@ -30,11 +35,25 @@
         document.getElementById("validationCustom02").value = "";
         document.getElementById("validationCustom03").value = "";
         document.getElementById("validationCustom04").value = "";
-        
+    }
+    
+    function rangeDefinido(){
+        var valorRange = $('#formControlRange').val();
+        var marcadorh1 = $('percentagemEscolhida');
+
+        marcadorh1.removeClass('alert-danger alert-success');
+
+        if(valorRange < 50){
+            marcadorh1.addClass('alert-danger');
+        } else{
+            marcadorh1.addBack('alert-success');
+        }
+        marcadorh1.text(valorRange + "%");
+    }
         
     var cancelButton = document.getElementById("cancelButton");
     cancelButton.addEventListener('click', clearForm);
-    };
+
    
    
 
@@ -117,8 +136,18 @@
                   </div>
 
                  
-
-                <div class="col-12">
+                    
+            <div class="form-row ">
+                <div class="form-group col-md-6">
+                <label for="formControlRange">Com que percentagem recomendaria o Bootstrap a terceiros?</label>
+                <input type="range" class="form-control-range" id="formControlRange" min="0" max="100" onchange="rangeDefinido()">
+                </div>
+                
+                <div class="form-group col-md-6">
+                <h1 id="percentagemEscolhida"></h1>
+                </div>
+                </div>
+                            <div class="col-12">
    
                  <button type="button" class="btn btn-secondary" id="cancelButton" onclick="clearForm()">Cancelar</button>
                 <button type="submit" class="btn btn-primary">Enviar</button>
@@ -128,10 +157,6 @@
         
        
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous">
-      
- 
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+   
 </body>
 </html>

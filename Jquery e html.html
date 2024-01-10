@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="form-group col-md-6  table-responsive">
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th data-field="qtd">Qtd</th>
+                            <th data-field="item">Item Name</th>
+                            <th data-field="preco">Preço Unit</th>
+                            <th data-field="preco">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input class="qtd" type="text"></td>
+                            <td><input class="item" type="text"></td>
+                            <td><input class="price" type="text"></td>
+                            <td><input class="total" type="text" disabled=""></td>
+                        </tr>
+                        <tr>
+                            <td><input class="qtd" type="text"></td>
+                            <td><input class="item" type="text"></td>
+                            <td><input class="price" type="text"></td>
+                            <td><input class="total" type="text" disabled=""></td>
+                        </tr>
+                        <tr>
+                            <td><input class="qtd" type="text"></td>
+                            <td><input class="item" type="text"></td>
+                            <td><input class="price" type="text"></td>
+                            <td><input class="total" type="text" disabled=""></td>
+                        </tr>
+                        <tr>
+                            <td><input class="qtd" type="text"></td>
+                            <td><input class="item" type="text"></td>
+                            <td><input class="price" type="text"></td>
+                            <td><input class="total" type="text" disabled=""></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-4"><h1>Resultado Total</h1></div>
+            <div class="col-2"><h2 id="total" class="text-right"></h2></div>
+        </div>
+
+        <div class="row ">
+            <div class="col-auto">
+                <button type="button" class="btn btn-primary mb-2" onclick="calcular()">total</button>
+                <button type="button" class="btn btn-primary mb-2" onclick="totalLinhas()">total linhas?</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script  src="Encomenda.js"> </script>
+</body>
+</html>
